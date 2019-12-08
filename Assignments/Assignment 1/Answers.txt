@@ -1,0 +1,112 @@
+1. Display the statement “HELLO PYTHON” at command line.
+	print(“HELLO PYTHON”)
+
+2. Write a Python program to display the current date and time.
+	import datetime
+		now = datetime.datetime.now()
+		print ("Current date and time : ")
+		print (now.strftime("%Y-%m-%d %H:%M:%S"))
+3. Write a Python program which accepts the user's first and last name and print them in reverse order with a space between them. 
+
+	fname = input("Input your First Name : ")
+	lname = input("Input your Last Name : ")
+	print (lname + " " + fname)
+
+4. Write a Python program which accepts a sequence of comma-separated numbers from user and generate a list and a tuple with those numbers. Test case: Sample data : 3, 5, 7, 23 Output : List : ['3','5',"7',' 23") Tuple : ('3',' 5',' 7’, ' 23") 
+values = input("Input some comma separated numbers : ")
+
+	list = values.split(",")
+	tuple = tuple(list)
+	print('List : ',list)
+	print('Tuple : ',tuple)
+
+5. Write a Python program to print all even numbers from a given numbers list in the same order and stop the printing if any numbers that come after 237 in the sequence.
+numbers = [386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345, 399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217,  815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717, 958,743, 527  ]
+
+	q=[]
+	for x in numbers:
+	    if x == 237:
+	        q.append(x)
+	        break;
+	    elif x % 2 == 0:
+	        q.append(x)     
+	print(q)
+
+6. Write a Python program to get the number of occurrences of a specified element in an array.
+
+	from array import *
+
+	array_num = array('i', [1, 3, 5, 3, 7, 9, 3])
+	print("Original array: "+str(array_num))
+	print("Number of occurrences of the number 3 in the said array: "+str(array_num.count(3)))
+
+7. Write a Python program to remove the first occurrence of a specified element from an array
+
+	from array import *
+	array_num = array('i', [1, 3, 5, 3, 7, 1, 9, 3])
+	print("Original array: "+str(array_num))
+	print("Remove the first occurrence of 3 from the said array:")
+	array_num.remove(3)
+	print("New array: "+str(array_num))
+    
+8. Write a Python program to convert an array to an ordinary list with the same items.
+
+	from array import *
+	array_num = array('i', [1, 3, 5, 3, 7, 1, 9, 3])
+	print("Original array: "+str(array_num))
+	num_list = array_num.tolist()
+	print("Convert the said array to an ordinary list with the same items:")
+	print(num_list)
+    
+9. Write a Python program to add member(s) in a set.
+	#A new empty set
+
+	color_set = set()
+	color_set.add("Red")
+	print(color_set)
+
+	#Add multiple items
+	color_set.update(["Blue", "Green"])
+	print(color_set)
+    
+10. Write a Python program to remove an item from a set if it is present in the set.
+
+	#Create a new set
+	num_set = set([0, 1, 2, 3, 4, 5])
+	#Discard number 4
+	num_set.discard(4)
+	print(num_set)
+    
+11. Write a Python program to find the length of a set and find maximum and the minimum value in the set.
+	
+	#Create a set
+	seta = set([5, 10, 3, 15, 2, 20])
+	#Find maximum value
+	print(max(seta))
+	#Find minimum value
+	print(min(seta))
+    
+12. Write a Python script to concatenate following dictionaries to create a new one. Test Case: dicl={1:10, 2:20} , dic2={3:30, 4:40}, dic3={5:50,6:60} Output : {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+dic1={1:10, 2:20}
+dic2={3:30, 4:40}
+dic3={5:50,6:60}
+
+	dic4 = {}
+	for d in (dic1, dic2, dic3): dic4.update(d)
+	print(dic4)
+    
+13. Write a Python script to generate and print a dictionary that contains a number (between 1 and n) in the form (x, x*x). Test case: (n= 5) Output : {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+	
+	n=int(input("Input a number "))
+	d = dict()
+	for x in range(1,n+1):
+	    d[x]=x*x
+	print(d)
+    
+14. Write a Python program to get the top three items in a shop.Test case: {‘item1': 45.50, ‘item2':35, 'item3': 41.30, 'item4':55, ‘item5': 24}.Output: item4 55, item] 45.5, item3 41.3 
+
+	from heapq import nlargest
+	from operator import itemgetter
+	items = {'item1': 45.50, 'item2':35, 'item3': 41.30, 'item4':55, 'item5': 24}
+	for name, value in nlargest(3, items.items(), key=itemgetter(1)):
+    		print(name, value)
