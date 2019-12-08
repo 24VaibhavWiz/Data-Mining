@@ -1,0 +1,116 @@
+Q1 output
+
+Using FP-growth algorithm:
+
+Total Relations found: 9 with 60% minimum support and 80% minimum confidence
+Relation:
+['K'] -> ['E']
+Confidence: 0.8
+Support:
+0.8
+--------------------------------
+Relation:
+['E'] -> ['K']
+Confidence: 1.0
+Support:
+0.8
+--------------------------------
+Relation:
+['Y'] -> ['K']
+Confidence: 1.0
+Support:
+0.6
+--------------------------------
+Relation:
+['O'] -> ['E']
+Confidence: 1.0
+Support:
+0.6
+--------------------------------
+Relation:
+['O'] -> ['K']
+Confidence: 1.0
+Support:
+0.6
+--------------------------------
+Relation:
+['K', 'O'] -> ['E']
+Confidence: 1.0
+Support:
+0.6
+--------------------------------
+Relation:
+['E', 'O'] -> ['K']
+Confidence: 1.0
+Support:
+0.6
+--------------------------------
+Relation:
+['O'] -> ['E', 'K']
+Confidence: 1.0
+Support:
+0.6
+--------------------------------
+Relation:
+['M'] -> ['K']
+Confidence: 1.0
+Support:
+0.6
+--------------------------------
+
+Using Apriori algorithm:
+
+Total Relations found: 9 with 60% minimum support and 80% minimum confidence
+Relation:
+['K'] -> ['E']
+Confidence: 0.8Support:
+0.8
+--------------------------------
+Relation:
+['E'] -> ['K']
+Confidence: 1.0
+Support:
+0.8
+--------------------------------
+Relation:
+['O'] -> ['E']
+Confidence: 1.0
+Support:
+0.6
+--------------------------------
+Relation:
+['M'] -> ['K']
+Confidence: 1.0
+Support:
+0.6
+--------------------------------
+Relation:
+['O'] -> ['K']
+Confidence: 1.0
+Support:
+0.6
+--------------------------------
+Relation:
+['Y'] -> ['K']
+Confidence: 1.0
+Support:
+0.6
+--------------------------------
+Relation:
+['K', 'O'] -> ['E']
+Confidence: 1.0
+Support:
+0.6
+--------------------------------
+Relation:
+['E', 'O'] -> ['K']
+Confidence: 1.0
+Support:
+0.6
+--------------------------------
+Relation:
+['O'] -> ['E', 'K']
+Confidence: 1.0
+Support:
+0.6
+--------------------------------
